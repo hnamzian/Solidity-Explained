@@ -1,5 +1,11 @@
 # Solidity Explained
 
+## Author
+
+Hossein Namazian
+
+www.linkdein.com/in/hossein-namazian-a22a59135
+
 ## What's contract and Gas
 
 ## IDEs and frameworks
@@ -23,32 +29,32 @@
 ## Solidity in depth
 
 - Version Pragma
-    ^0.4.24 :=  >= 0.4.24 <0.5.0
+  ^0.4.24 := >= 0.4.24 <0.5.0
 - contract definition
 
-    ```javascript
-    contract template {
+  ```javascript
+  contract template {
 
-    }
-    ```
+  }
+  ```
 
 - import
 
-    ```javascript
-    import "./path/to/contract.sol";
-    ```
+  ```javascript
+  import "./path/to/contract.sol";
+  ```
 
 - comments and standards
 
-    single line
+  single line
 
         // comment
-  
-    contract:
+
+  contract:
 
         /** @title */
 
-    function:
+  function:
 
         /** @title ...
             *  @dev ...
@@ -57,88 +63,88 @@
             */
 
 - state variables
-  
-    - bool
-    - uint, int
-    - address, members of address: (balance, transfer, send, call)
-    - bytesI, byte
-    - bytes,  push
-    - string, #push
-    - mapping
-    - struct
-    - array
+
+  - bool
+  - uint, int
+  - address, members of address: (balance, transfer, send, call)
+  - bytesI, byte
+  - bytes, push
+  - string, #push
+  - mapping
+  - struct
+  - array
 
 - casting
 
 - operators
 
-    ( +, -, *, /, %, ** )
+  ( +, -, \*, /, %, \*\* )
 
-    ( |, &, ^ )
+  ( |, &, ^ )
 
-    ( >>, << )
+  ( >>, << )
 
 - comparators
 
-    ( >, <, >=, <=, ==, != )
+  ( >, <, >=, <=, ==, != )
 
 - Enums
-  
-    ```javascript
-    enum STATE {S1, S2, S3};
-    ```
+
+  ```javascript
+  enum STATE {S1, S2, S3};
+  ```
 
 - constructor
 
-    ```javascript
-    constructor( args ) {
+  ```javascript
+  constructor( args ) {
 
-    }
-    ```
+  }
+  ```
 
 - function
 
-    ```javascript
-    function dummy( args_in ) modifiers returns( args_out ) {
-        ...
-        return ...;
-    }
-    ```
+  ```javascript
+  function dummy( args_in ) modifiers returns( args_out ) {
+      ...
+      return ...;
+  }
+  ```
 
 - modifier
 
-    ```javascript
-    modifier myModifier() {
-        ...
-        _;
-    }
-    ```
+  ```javascript
+  modifier myModifier() {
+      ...
+      _;
+  }
+  ```
 
 - fallback function
 
-    ```javascript
-    function() {
-        ...
-    }
-    ```
+  ```javascript
+  function() {
+      ...
+  }
+  ```
 
 - event
 
-    ```javascript
-    event MyEvent(uint256 indexed value, address indexed addr, ...);
+  ```javascript
+  event MyEvent(uint256 indexed value, address indexed addr, ...);
 
-    ...
+  ...
 
-    function MyFunc() {
-        emit MyEvent(_value, _addr);
-    }
-    ```
+  function MyFunc() {
+      emit MyEvent(_value, _addr);
+  }
+  ```
 
 - indexed
 
 -storage, memory, stack
-    storage variables are the ones which define your contract’s state and are only changed by sendTransaction calls
-    memory variables are temporary variables that exist only inside the calling function
+storage variables are the ones which define your contract’s state and are only changed by sendTransaction calls
+memory variables are temporary variables that exist only inside the calling function
 
     state variables are always in storage
     function arguments are always in memory
